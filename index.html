@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mukshud Ahmed — Private Business Investor</title>
+<meta name="description" content="Mukshud Ahmed buys and invests in UK SMEs turning over £800k+, offering acquisitions, angel investment, cash flow rescue, business turnaround and removal of personal guarantees.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF9F5;
+    --surface:#FFFFFF;
+    --ink:#171B22;
+    --navy:#0E2A47;
+    --navy-2:#153D63;
+    --gold:#A9793A;
+    --gold-soft:#C99A5B;
+    --slate:#5B6472;
+    --line:#E4E0D6;
+    --line-dark:rgba(255,255,255,0.14);
+    --max:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+  }
+  h1,h2,h3,.serif{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    line-height:1.12;
+    letter-spacing:-0.01em;
+    color:var(--navy);
+    margin:0;
+  }
+  p{margin:0 0 1em 0;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px;}
+  @media(max-width:640px){.wrap{padding:0 20px;}}
+
+  /* focus visibility */
+  a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,249,245,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{
+    display:flex;align-items:center;justify-content:space-between;
+    height:76px;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .seal{
+    width:42px;height:42px;border-radius:50%;
+    background:linear-gradient(155deg,var(--navy),var(--navy-2));
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;font-weight:600;color:var(--gold-soft);
+    font-size:16px;border:1px solid rgba(169,121,58,0.5);
+    flex-shrink:0;
+  }
+  .brand-text{display:flex;flex-direction:column;line-height:1.15;}
+  .brand-text strong{font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--navy);}
+  .brand-text span{font-size:11px;letter-spacing:0.06em;color:var(--slate);}
+  nav.links{display:flex;gap:34px;font-size:14.5px;font-weight:500;}
+  nav.links a{color:var(--navy);opacity:0.82;position:relative;padding:4px 0;}
+  nav.links a:hover{opacity:1;}
+  nav.links a::after{
+    content:"";position:absolute;left:0;right:0;bottom:-3px;height:1.5px;
+    background:var(--gold);transform:scaleX(0);transform-origin:left;
+    transition:transform .25s ease;
+  }
+  nav.links a:hover::after{transform:scaleX(1);}
+  .cta-btn{
+    background:var(--navy);color:#fff;padding:11px 22px;border-radius:3px;
+    font-size:14px;font-weight:600;border:1px solid var(--navy);
+    transition:background .2s ease, color .2s ease;white-space:nowrap;
+  }
+  .cta-btn:hover{background:var(--navy-2);}
+  .menu-toggle{display:none;background:none;border:0;cursor:pointer;padding:6px;}
+  .menu-toggle svg{width:24px;height:24px;stroke:var(--navy);}
+  @media(max-width:900px){
+    nav.links{display:none;}
+    .cta-btn.header-cta{display:none;}
+    .menu-toggle{display:block;}
+  }
+  #mobile-menu{
+    display:none;flex-direction:column;gap:2px;padding:8px 0 20px;
+    border-top:1px solid var(--line);
+  }
+  #mobile-menu.open{display:flex;}
+  #mobile-menu a{padding:12px 4px;font-size:15px;font-weight:500;color:var(--navy);border-bottom:1px solid var(--line);}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:76px 0 96px;}
+  .hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:64px;align-items:center;}
+  @media(max-width:940px){.hero-grid{grid-template-columns:1fr;gap:44px;}}
+  .eyebrow{
+    font-size:13.5px;font-weight:600;color:var(--gold);
+    margin-bottom:18px;
+  }
+  .hero h1{font-size:clamp(34px,4.6vw,54px);margin-bottom:20px;}
+  .hero-role{
+    font-size:15.5px;color:var(--slate);max-width:52ch;margin-bottom:28px;
+  }
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;}
+  .btn-primary{
+    background:var(--navy);color:#fff;padding:14px 26px;border-radius:3px;
+    font-weight:600;font-size:14.5px;display:inline-block;
+    transition:background .2s ease, transform .2s ease;
+  }
+  .btn-primary:hover{background:var(--navy-2);transform:translateY(-1px);}
+  .btn-secondary{
+    border:1px solid var(--navy);color:var(--navy);padding:13px 25px;border-radius:3px;
+    font-weight:600;font-size:14.5px;display:inline-block;transition:all .2s ease;
+  }
+  .btn-secondary:hover{background:var(--navy);color:#fff;}
+
+  .hero-photo-wrap{position:relative;}
+  .hero-photo-frame{
+    border:1px solid var(--line);padding:14px;background:var(--surface);
+    box-shadow:0 24px 48px -24px rgba(14,42,71,0.25);
+  }
+  .hero-photo-frame img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;}
+  .hero-tag{
+    position:absolute;left:-18px;bottom:-22px;
+    background:var(--navy);color:#fff;padding:16px 20px;
+    max-width:220px;border-left:3px solid var(--gold);
+    box-shadow:0 16px 30px -14px rgba(14,42,71,0.45);
+  }
+  .hero-tag strong{display:block;font-family:'Fraunces',serif;font-size:22px;margin-bottom:2px;}
+  .hero-tag span{font-size:12.5px;color:rgba(255,255,255,0.72);}
+  @media(max-width:640px){.hero-tag{left:0;bottom:-18px;}}
+
+  /* fade-up entrance, single orchestrated moment */
+  .hero-grid > *{animation:fadeUp .7s ease both;}
+  .hero-grid > *:nth-child(2){animation-delay:.12s;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+  @media(prefers-reduced-motion:reduce){
+    .hero-grid > *{animation:none;}
+  }
+
+  /* ---------- Section shell ---------- */
+  section{padding:88px 0;}
+  .section-head{max-width:640px;margin-bottom:48px;}
+  .section-head .eyebrow{margin-bottom:14px;}
+  .section-head h2{font-size:clamp(26px,3.2vw,36px);}
+  .section-head p{color:var(--slate);margin-top:14px;font-size:15.5px;}
+
+  hr.rule{border:0;border-top:1px solid var(--line);margin:0;}
+
+  /* ---------- Criteria ---------- */
+  .criteria{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .criteria-top{max-width:820px;margin-bottom:44px;}
+  .criteria-top h2{font-size:clamp(24px,3vw,32px);}
+  .criteria-top p{color:var(--slate);margin-top:16px;font-size:15.5px;}
+  .criteria-list{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media(max-width:760px){.criteria-list{grid-template-columns:1fr;}}
+  .criteria-item{background:var(--surface);padding:26px 28px;display:flex;gap:16px;}
+  .criteria-item .mark{
+    flex-shrink:0;width:26px;height:26px;border-radius:50%;
+    border:1.5px solid var(--gold);color:var(--gold);
+    display:flex;align-items:center;justify-content:center;font-size:14px;margin-top:2px;
+  }
+  .criteria-item p{margin:0;font-size:15px;color:var(--ink);}
+  .criteria-cta{margin-top:36px;font-size:15px;color:var(--slate);}
+  .criteria-cta a{color:var(--navy);font-weight:600;border-bottom:1px solid var(--gold);}
+
+  /* ---------- Value add ---------- */
+  .value-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:start;}
+  @media(max-width:940px){.value-grid{grid-template-columns:1fr;gap:36px;}}
+  .value-photo{border:1px solid var(--line);padding:12px;background:var(--surface);}
+  .value-photo img{aspect-ratio:4/5;object-fit:cover;width:100%;}
+  .value-photo figcaption{margin:0;padding-top:12px;font-size:13px;color:var(--slate);text-align:center;}
+  ul.value-list{list-style:none;margin:0;padding:0;}
+  ul.value-list li{
+    padding:16px 0;border-bottom:1px solid var(--line);
+    display:flex;gap:16px;font-size:15px;
+  }
+  ul.value-list li:first-child{padding-top:0;}
+  ul.value-list li::before{
+    content:"";flex-shrink:0;width:7px;height:7px;border-radius:50%;
+    background:var(--gold);margin-top:8px;
+  }
+
+  /* ---------- Services (accordion) ---------- */
+  .services{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .accordion{border-top:1px solid var(--line);}
+  .acc-item{border-bottom:1px solid var(--line);}
+  .acc-head{
+    width:100%;text-align:left;background:none;border:0;cursor:pointer;
+    padding:26px 4px;display:flex;justify-content:space-between;align-items:center;gap:24px;
+    font-family:'Fraunces',serif;font-size:20px;color:var(--navy);font-weight:600;
+  }
+  .acc-head .num{font-family:'Inter',sans-serif;font-weight:600;font-size:13px;color:var(--gold);margin-right:14px;}
+  .acc-head .plus{
+    flex-shrink:0;width:28px;height:28px;position:relative;
+  }
+  .acc-head .plus::before,.acc-head .plus::after{
+    content:"";position:absolute;background:var(--navy);left:50%;top:50%;
+    transform:translate(-50%,-50%);
+  }
+  .acc-head .plus::before{width:16px;height:1.5px;}
+  .acc-head .plus::after{width:1.5px;height:16px;transition:transform .25s ease, opacity .25s ease;}
+  .acc-item.open .acc-head .plus::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0;}
+  .acc-panel{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+  .acc-panel-inner{padding:0 4px 32px;max-width:760px;color:var(--slate);font-size:15px;}
+  .acc-panel-inner p{margin:0 0 14px;}
+  .acc-panel-inner strong{color:var(--ink);}
+  .acc-panel-inner .steps{margin:16px 0;padding:0;list-style:none;}
+  .acc-panel-inner .steps li{padding:10px 0 10px 26px;position:relative;border-top:1px solid var(--line);}
+  .acc-panel-inner .steps li:first-child{border-top:0;}
+  .acc-panel-inner .steps li::before{content:"—";position:absolute;left:0;color:var(--gold);}
+  .acc-panel-inner .note{
+    margin-top:18px;padding:14px 18px;background:var(--bg);border-left:2px solid var(--gold);
+    font-size:14px;
+  }
+
+  /* ---------- Portfolio ---------- */
+  .portfolio-list{display:flex;flex-direction:column;}
+  .pf-item{
+    display:grid;grid-template-columns:200px 1fr;gap:36px;
+    padding:34px 0;border-top:1px solid var(--line);
+  }
+  .pf-item:last-child{border-bottom:1px solid var(--line);}
+  @media(max-width:760px){.pf-item{grid-template-columns:1fr;gap:10px;}}
+  .pf-mark{font-family:'Fraunces',serif;font-size:15px;font-weight:600;color:var(--gold);letter-spacing:0.02em;}
+  .pf-body h3{font-size:20px;margin-bottom:8px;}
+  .pf-body p{color:var(--slate);font-size:15px;margin-bottom:0;}
+  .pf-status{
+    display:inline-block;margin-top:12px;font-size:12.5px;font-weight:600;
+    color:var(--navy);border:1px solid var(--navy);padding:4px 10px;border-radius:2px;
+  }
+
+  .super-band{
+    margin-top:56px;background:var(--navy);color:#fff;padding:44px 40px;
+    display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;
+  }
+  @media(max-width:760px){.super-band{grid-template-columns:1fr;text-align:left;}}
+  .super-band img{width:120px;height:120px;object-fit:cover;border-radius:50%;border:2px solid var(--gold-soft);}
+  .super-band p{color:rgba(255,255,255,0.82);font-size:15px;margin:0;}
+  .super-band p + p{margin-top:12px;}
+
+  /* ---------- Contact ---------- */
+  .contact{background:var(--navy);color:#fff;}
+  .contact .section-head h2{color:#fff;}
+  .contact .section-head p{color:rgba(255,255,255,0.7);}
+  .contact .eyebrow{color:var(--gold-soft);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);}
+  @media(max-width:700px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-card{background:var(--navy-2);padding:30px 30px;}
+  .contact-card .label{font-size:12.5px;letter-spacing:0.04em;color:var(--gold-soft);margin-bottom:10px;font-weight:600;}
+  .contact-card .value{font-family:'Fraunces',serif;font-size:19px;}
+  .contact-card a.value:hover{color:var(--gold-soft);}
+
+  footer{background:var(--navy);border-top:1px solid var(--line-dark);padding:26px 0;}
+  .footer-row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+  .footer-row p{margin:0;color:rgba(255,255,255,0.5);font-size:13px;}
+  .footer-row a{color:rgba(255,255,255,0.7);font-size:13px;}
+  .footer-row a:hover{color:var(--gold-soft);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a href="#home" class="brand">
+      <span class="seal">MA</span>
+      <span class="brand-text">
+        <strong>Mukshud Ahmed</strong>
+        <span>PRIVATE BUSINESS INVESTOR</span>
+      </span>
+    </a>
+    <nav class="links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="cta-btn header-cta">Start a conversation</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="wrap">
+    <div id="mobile-menu">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">ACQUISITIONS · TURNAROUND · ANGEL INVESTMENT</div>
+        <h1>People make places.<br>Places make people.</h1>
+        <p class="hero-role">
+          Private business investor, acquirer and turnaround specialist. Multiple successful exits,
+          a debt destroyer's eye for cash flow, and a black book built over decades of buying,
+          fixing and growing UK companies.
+        </p>
+        <div class="hero-actions">
+          <a href="#services" class="btn-primary">Explore the services</a>
+          <a href="mailto:info@eicgroupltd.co.uk" class="btn-secondary">info@eicgroupltd.co.uk</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-frame">
+          <img src="https://lh3.googleusercontent.com/sitesv/AG8ngQWNZX8FlgLh_Nt9tHtUsZZbcDAzr-kkciQzRSRtHoLSJjSiGXVeHdcraaQKCavHm3TaaYfCMIQTxR04OtIn4UDeQx_7EDQRpRaTm7uJIngQ7kcTAKrNiXvE_YoLZh-TQMBPZKigzDNLi-pGavNZfOIdwRfdpBVAOkqe_JhwN-B__MK8bs6NvyPd8eXs0XXswtBFppbuiJWQYlBRag1EZc0tNpnHunyNbJMzenEJhD0=w1280" alt="Mukshud Ahmed, private business investor">
+        </div>
+        <div class="hero-tag">
+          <strong>£800k+</strong>
+          <span>Minimum turnover of companies acquired or backed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRITERIA -->
+  <section class="criteria">
+    <div class="wrap">
+      <div class="criteria-top">
+        <h2>I buy and invest in companies turning over £800k+, where owners feel they've
+          taken the business as far as they can and need a change in their lifestyle.</h2>
+        <p>This could be by way of a sale, investment to take the business to the next level,
+          or by solving financial and operational problems with my business turnaround team.
+          Having started my own companies and acquired established ones — growing and exiting
+          successfully — I now spend my time investing in businesses whose owners are looking
+          to fully exit, or backing businesses that need turnaround and growth support to get
+          back into their prime.</p>
+      </div>
+      <div class="criteria-list">
+        <div class="criteria-item"><span class="mark">✓</span><p>Owners who are baby boomers, thinking about their next chapter.</p></div>
+        <div class="criteria-item"><span class="mark">✓</span><p>Businesses in industries that are simple to explain in a single sentence.</p></div>
+        <div class="criteria-item"><span class="mark">✓</span><p>No succession plan in place — children pursuing their own careers, or ventures like crypto, NFTs and apps.</p></div>
+        <div class="criteria-item"><span class="mark">✓</span><p>Owners unwilling to take on further finance that unfairly demands personal guarantees.</p></div>
+      </div>
+      <p class="criteria-cta">Recognise your business here? <a href="mailto:info@eicgroupltd.co.uk">Get in touch for a confidential, informal chat</a> — and if I can't help, I'll do my best to introduce you to someone who can, without asking for anything in return.</p>
+    </div>
+  </section>
+
+  <!-- VALUE ADD -->
+  <section id="value">
+    <div class="wrap value-grid">
+      <figure class="value-photo">
+        <img src="https://lh3.googleusercontent.com/sitesv/AG8ngQUgYYnSTHHMAVeyr_i9gK64oMmOYyPY0IIxTrwi8ztfLdTD6-393UDfvY7iNxYGq8jbNCPHUd49ao1HEfVNEx7AvQsrnPCBe7nPf6lbgk8HMORBSufaxNzhTJYUX6Y3GteO1Ns7ZkvWhgccqRdzFim5SXYBOnFWZYVaMWKYvNUCsOQkdpXXlXtwHebzLF3MSaoQCXoUK2i2b9QmiV377rFCQLIIyVMeaJWjq6C5t-4=w1280" alt="Mukshud Ahmed, business turnaround expert">
+        <figcaption>Mukshud Ahmed — Business Turnaround Expert</figcaption>
+      </figure>
+      <div>
+        <div class="section-head" style="margin-bottom:28px;">
+          <div class="eyebrow">HOW I ADD SHAREHOLDER VALUE</div>
+          <h2>Dramatically improving the numbers that actually matter</h2>
+          <p>Some businesses need general expertise from somebody who has "been there and done
+            that" — putting systems and processes in place that resolve cash flow, bad debtors,
+            personal guarantees and staff retention, freeing owners to focus on growth.</p>
+        </div>
+        <ul class="value-list">
+          <li>Focusing on the essential KPIs that often get overlooked in favour of "sexier" metrics.</li>
+          <li>Immediately improving a company's cash flow and resolving outstanding creditor issues.</li>
+          <li>Refocusing and accurately measuring the return on marketing spend.</li>
+          <li>Freeing up cash stuck on the balance sheet, and removing personal guarantees from directors.</li>
+          <li>Setting measurable, actionable short and long-term targets to keep the business on track.</li>
+          <li>Building systems so the business runs at full capacity without owners being "busy fools" on site.</li>
+          <li>Drawing on a deep network of investor, accounting, financial and operational contacts.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">SERVICES</div>
+        <h2>Five ways to work together</h2>
+        <p>From an outright acquisition to a single, success-fee-only engagement — select
+          whichever fits where your business is today.</p>
+      </div>
+
+      <div class="accordion">
+        <div class="acc-item open">
+          <button class="acc-head" aria-expanded="true">
+            <span><span class="num">01</span>Acquisitions</span>
+            <span class="plus"></span>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <p>I buy UK-based SMEs in traditional sectors that are easy to explain in a single sentence.</p>
+              <ul class="steps">
+                <li>No start-up companies</li>
+                <li>Minimum of 10 staff</li>
+                <li>Established for a minimum of 5 years</li>
+                <li>Sectors that are the backbone of the UK economy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" aria-expanded="false">
+            <span><span class="num">02</span>Angel Investor</span>
+            <span class="plus"></span>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <p>I invest in companies in exchange for an equity stake.</p>
+              <p><strong>Why an angel investor and not bank finance?</strong></p>
+              <ul class="steps">
+                <li>No personal guarantees or a charge on your family home</li>
+                <li>Skillsets that grow the business in ways simple debt cannot</li>
+                <li>Money where my mouth is — if I can't improve the business, I won't invest</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" aria-expanded="false">
+            <span><span class="num">03</span>Cash Flow Fixer</span>
+            <span class="plus"></span>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <p>Businesses do not fail due to a lack of profit — they fail due to a lack of cash.</p>
+              <p>I specialise in fixing a company's cash flow by fixing the leaky bucket before
+                putting more water into it, so the business isn't back in the same position again
+                in six months' time.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" aria-expanded="false">
+            <span><span class="num">04</span>Business Turnaround &amp; Recovery</span>
+            <span class="plus"></span>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <p>A fresh pair of eyes, backed by analysis, planning and years of business
+                experience, for companies facing cash flow or debt issues — without the
+                thousands of pounds an Insolvency Practitioner typically charges.</p>
+              <p>Turning a business around while you're deeply involved is challenging,
+                especially with mounting debts, a CVA or personal guarantees weighing on you.
+                Working alongside the owner, I can spot problems that aren't visible to
+                management who are too close to the subject.</p>
+              <p><strong>How it works</strong></p>
+              <ul class="steps">
+                <li>An initial meeting to assess the situation</li>
+                <li>Together, working through the biggest challenges the business faces</li>
+                <li>A custom turnaround plan, implemented with proven systems and processes</li>
+                <li>My team engages outstanding creditors, stabilises cash flow and puts a forecast in place</li>
+              </ul>
+              <p>If we can't add value and turn things around, we'll decline the opportunity to
+                work with you, to respect your time — unlike advisors who charge by the hour
+                while the process drags on.</p>
+              <div class="note">Get started by emailing <a href="mailto:info@eicgroupltd.co.uk" style="color:var(--navy);font-weight:600;">info@eicgroupltd.co.uk</a> or <a href="https://calendly.com/eicgroup/intro" style="color:var(--navy);font-weight:600;" target="_blank" rel="noopener">scheduling a call</a>.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" aria-expanded="false">
+            <span><span class="num">05</span>Removal of Personal Guarantees</span>
+            <span class="plus"></span>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <p>SMEs take on the most risk, pay the most tax and employ the most people in our
+                economy — yet still have to put a personal guarantee, and their family home, on
+                the line to borrow. If you're thinking of selling, winding down or exiting your
+                company, there's a legal way for PGs to be terminated, and I can arrange this,
+                including all documentation.</p>
+              <p>This service is offered on a <strong>success-fee-only</strong> basis — a
+                percentage of the PG amount — and it's completely risk free: I won't ask for a
+                penny until you have written confirmation from your lender that the PG has been
+                terminated.</p>
+              <div class="note">Email <a href="mailto:info@eicgroupltd.co.uk" style="color:var(--navy);font-weight:600;">info@eicgroupltd.co.uk</a> with a copy of your loan agreement to get started.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO / ABOUT -->
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">ABOUT ME</div>
+        <h2>Husband, father of two, and investor in UK SMEs</h2>
+        <p>Investor in multiple UK SMEs, ranging from 20% to 100% equity stakes — buying
+          companies outright from owners looking to exit, investing in those wanting to grow,
+          and helping businesses that have lost their way get back to full health.</p>
+      </div>
+
+      <div class="portfolio-list">
+        <div class="pf-item">
+          <div class="pf-mark">Amalfi Salons</div>
+          <div class="pf-body">
+            <h3>A roll-up of six distressed independent hair salons</h3>
+            <p>Merged and restructured using financial engineering across cash flow, creditors
+              and systems before achieving a very successful exit.</p>
+            <span class="pf-status">Successful exit</span>
+          </div>
+        </div>
+        <div class="pf-item">
+          <div class="pf-mark">Wheelchair Friendly Taxis</div>
+          <div class="pf-body">
+            <h3>Transport solutions for wheelchair-bound passengers</h3>
+            <p>Preferred-supplier contracts with the NHS, Metro Bus, the Queen Elizabeth
+              Foundation and Access to Work, among many others.</p>
+            <span class="pf-status">Successful exit</span>
+          </div>
+        </div>
+        <div class="pf-item">
+          <div class="pf-mark">Media Trader</div>
+          <div class="pf-body">
+            <h3>Marketing and advertising for global brands</h3>
+            <p>Clients including L'Oréal, Chanel, Louis Vuitton, Rolls-Royce, BMW, Mercedes,
+              Hotel.com and Lastminute.com, among many others.</p>
+            <span class="pf-status">Active investment</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="super-band">
+        <img src="https://lh3.googleusercontent.com/sitesv/AG8ngQUUEdvXsuLb9zP1RxH6fGWLjS7Fs5zHbT0XG8jx3H0ogJljD9zfrkp0an6d_2WSinLu028vWzesJzGaVmBnOBtNGrCehnCKz1bhpgkRHw7ctmCsoqiTDcmJzrj7cgWgc5DZ32uM-auUdvKi7KGpsC3lqPuSJC2s2tSBwTLJ5Cukh_WKIrSqpMyK6mJ6wgHZ5WbmvXsI5BO93lA1JyDWD3RbK0-MOK0v-yXgjYd7BjQ=w1280" alt="Mukshud Ahmed, business super connector">
+        <div>
+          <p><strong style="color:#fff;">A super connector.</strong> I've put together multiple
+            investment teams over the years with hundreds of years of combined board-level
+            experience — including a Chairman with over £1bn of M&amp;A deals, Chairmen of
+            Premier League football clubs, CEOs of multi-million-pound companies, CFOs with
+            dozens of acquisitions, and sector-relevant industry experts and non-execs.</p>
+          <p>These teams have raised finance for multiple projects, including a double-digit
+            million care home acquisition and a multi-site children's day nursery company.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">WORK WITH ME</div>
+        <h2>Let's have a confidential, informal chat</h2>
+        <p>If you have any questions, or your business fits the profile above, get in touch —
+          whatever the outcome, I'll always try to point you in the right direction.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="label">EMAIL</div>
+          <a class="value" href="mailto:info@eicgroupltd.co.uk">info@eicgroupltd.co.uk</a>
+        </div>
+        <div class="contact-card">
+          <div class="label">PHONE</div>
+          <a class="value" href="tel:+447498538818">07498 538818</a>
+        </div>
+        <div class="contact-card">
+          <div class="label">LINKEDIN</div>
+          <a class="value" href="https://www.linkedin.com/in/eicgroupltd-mahmed/" target="_blank" rel="noopener">M Ahmed</a>
+        </div>
+        <div class="contact-card">
+          <div class="label">CALENDLY</div>
+          <a class="value" href="https://calendly.com/eicgroup/intro" target="_blank" rel="noopener">Book a call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <p>© 2023 Mukshud Ahmed. All rights reserved.</p>
+    <a href="https://www.linkedin.com/in/eicgroupltd-mahmed/" target="_blank" rel="noopener">LinkedIn ↗</a>
+  </div>
+</footer>
+
+<script>
+  // mobile menu
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', false);
+  }));
+
+  // accordion
+  document.querySelectorAll('.acc-item').forEach(item => {
+    const head = item.querySelector('.acc-head');
+    const panel = item.querySelector('.acc-panel');
+    if (item.classList.contains('open')) {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+    head.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item.open').forEach(other => {
+        if (other !== item) {
+          other.classList.remove('open');
+          other.querySelector('.acc-head').setAttribute('aria-expanded','false');
+          other.querySelector('.acc-panel').style.maxHeight = null;
+        }
+      });
+      item.classList.toggle('open', !isOpen);
+      head.setAttribute('aria-expanded', String(!isOpen));
+      panel.style.maxHeight = !isOpen ? panel.scrollHeight + 'px' : null;
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    document.querySelectorAll('.acc-item.open .acc-panel').forEach(panel => {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    });
+  });
+</script>
+
+</body>
+</html>
